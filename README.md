@@ -1,17 +1,19 @@
-# job_board_client
+# Bacheca annunci — Client Flutter
 
-A new Flutter project.
+App mobile per consultare annunci di lavoro e candidarsi allegando un curriculum PDF. Le aziende possono registrarsi, pubblicare annunci e consultare le candidature ricevute.
 
-## Getting Started
+## Avvio
 
-This project is a starting point for a Flutter application.
+Avvia il backend ASP.NET Core, poi esegui questi comandi dalla root del client. Sostituisci `ID_DISPOSITIVO` con l’ID mostrato da `flutter devices` e `URL_BACKEND` con l’indirizzo raggiungibile dal dispositivo.
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter pub get
+flutter devices
+flutter run -d ID_DISPOSITIVO --dart-define=API_BASE_URL=URL_BACKEND
+```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- **Simulatore iOS** — `http://localhost:5153` se il backend gira sullo stesso Mac. È anche il valore predefinito dell’app.
+- **Emulatore Android Studio** — `http://10.0.2.2:5153` se il backend gira sullo stesso computer e ascolta su localhost. [Documentazione Android](https://developer.android.com/studio/run/emulator-networking-address)
+- **Telefono fisico Android o iOS** — `http://IP_DEL_COMPUTER:5153`. Collega il telefono e il computer alla stessa Wi-Fi e avvia il backend sulla rete locale.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Su iPhone fisico puoi aggiungere `--release` per usare l’app dalla schermata Home dopo l’installazione.
